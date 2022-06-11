@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootcamp | Home Page</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: wheat;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .main-content{
+            margin: 20px auto;
+            width: 70%;
+        }
+        .top{
+            background: rgb(170, 215, 35);
+            height: 12em;
+            margin-bottom: 4px;
+        }
+        .top-text{
+            position: relative;
+            top: 2.5em;
+            left: 38em;
+        }
+        .top-text h2{
+            font-size: 2em;
+            font-weight: normal;
+        }
+        .content{
+            background-color: rgba(218, 206, 206, 0.835);
+            padding: 10px;
+        }
+        nav{
+            border: 1px solid grey;
+            border-bottom: none;
+            height: 2.5em;
+        }
+        nav ul{
+            display: flex;
+            justify-content: space-around;
+        }
+        nav li{
+            list-style: none;
+            font-size: 16pt;
+            padding: 6px;
+        }
+        nav li a{
+            text-decoration: none;
+            color: rgba(0, 0, 0, 0.683);
+        }
+        nav li a:hover{
+            cursor: pointer;
+            color: brown;
+        }
+        .left{
+            width: 25%;
+            border-right: 1px solid gray;
+            padding-right: 20px;
+        }
+        .right{
+            width: 70%;
+        }
+        .right div h2{
+            margin-bottom: 10px;
+        }
+        .main-menu h2, .block h2, .right div h2{
+            font-weight: normal;
+            font-size: 1.6em;
+        }
+        .main-menu h2, .block h2{
+            background: rgb(214, 236, 91);
+            padding: 4px 25px 6px 20px;
+            margin-bottom: .5em;
+        }
+        .main-menu ul, .para{
+            margin-bottom: 1em;
+        }
+        .main-menu li{
+            line-height: 1.5em;
+            margin-left: 2em;
+        }
+        .main-menu li::marker{
+            color: rgba(99, 132, 0, 0.931);
+        }
+        .main-menu li a{
+            color: rgba(99, 132, 0, 0.931);
+        }
+        .main-menu li a:hover{
+            cursor: pointer;
+            color: black;
+            font-weight: bold;
+        }
+        .both-content{
+            margin: 30px 0 40px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .flex{
+            display: flex;
+            margin-top: 20px;
+            justify-content: space-between;
+        }
+        .flex div:nth-child(1){
+            border-right: 1px solid gray;
+            padding-right: 20px;
+        }
+        .flex div button{
+            background: rgb(170, 215, 35);
+            padding: 8px 20px;
+            font-weight: bold;
+            font-size: 14px;
+            border: 1px solid grey;
+            margin-top: 20px;
+        }
+        .flex div button:hover{
+            cursor: pointer;
+        }
+        .para2{
+            line-height: 1.5em;
+            text-align: justify;
+
+        }
+        .bottom{
+            height: 3em;
+            background: rgb(179, 221, 51);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Merriweather', sans-serif;
+        }
+        .flex div{
+            width: 46%;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-content">
+        <div class="top">
+            <div class="top-text">
+                <h2>Enter Site Title</h2>
+                <p>Enter Site Slogan</p>
+            </div>
+        </div>
+        <div class="content">
+            <div class="content-all">
+                <nav>
+                    <ul>
+                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="/page_1.html">New Page 1</a></li>
+                        <li><a href="/page_2.html">New Page 2</a></li>
+                        <li><a href="/page_3.html">New Page 3</a></li>
+                        <li><a href="/page_4.html">New Page 4</a></li>
+                        <li><a href="/page_5.html">New Page 5</a></li>
+                    </ul>
+                </nav>
+                <div class="both-content">
+                    <aside class="left">
+                        <div class="main-menu">
+                            <h2>Main Menu</h2>
+                            <ul>
+                                <li type="square"><a href="#">Menu Item 1</a></li>
+                                <li type="square"><a href="#">Menu Item 2</a></li>
+                                <li type="square"><a href="#">Menu Item 3</a></li>
+                                <li type="square"><a href="#">Menu Item 4</a></li>
+                                <li type="square"><a href="#">Menu Item 5</a></li>
+                                <li type="square"><a href="#">Menu Item 6</a></li>
+                                <li type="square"><a href="#">Menu Item 7</a></li>
+                                <li type="square"><a href="#">Menu Item 8</a></li>
+                            </ul>
+                        </div>
+                        <div class="block">
+                            <h2>Block</h2>
+                            <p class="para">Enter Block content here</p>
+                            <p class="para2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore dignissimos asperiores similique, numquam esse deleniti minus eligendi. Voluptatum modi sed culpa nemo necessitatibus, saepe, soluta nihil, maiores eaque voluptates labore!</p>
+                        </div>
+                    </aside>
+                    <aside class="right">
+                        <div>
+                            <h2>Gallery</h2>
+                            <p class="para2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut, perferendis quae harum, ad voluptate fugit saepe iure consectetur optio recusandae ea, dignissimos neque repellat temporibus error doloremque ipsa quidem. Recusandae fuga atque sed exercitationem neque aliquam excepturi corrupti fugiat explicabo quas! Quos quibusdam asperiores, tempora atque veniam, nostrum ad distinctio maiores sapiente possimus qui aliquam at provident ullam dolorem. Accusantium, distinctio. Veritatis vel voluptas assumenda recusandae id voluptatem eius expedita aspernatur, voluptate, odit ex cumque labore, vero nisi eligendi corporis. Soluta eum tenetur earum mollitia iusto officiis repellat doloribus rerum quisquam voluptates. Assumenda animi doloremque excepturi maxime voluptate fuga nostrum accusamus inventore quasi distinctio, minima soluta eveniet saepe. Vero consectetur ipsum ad laborum ullam! Veniam omnis </p>
+                        </div>
+                        <div class="flex">
+                            <div>
+                                <h2>Subscription</h2>
+                                <p class="para2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, alias. Facilis tenetur quae doloremque voluptate excepturi recusandae, dolorum libero labore dolores impedit ut autem aliquid nobis alias repellendus a perspiciatis, dolorem quo tempora nulla minima earum. Ipsam veniam modi quo, dolorem</p>
+                                <button>Read more</button>
+                            </div>
+                            <div>
+                                <h2>Other Services</h2>
+                                <p class="para2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia animi accusantium dolorem quo quam eveniet eligendi alias ab. Expedita, eligendi autem? Nostrum reprehenderit doloribus sequi? Corrupti, aspernatur. Numquam facere, et, non dolorum nobis quos cumque corrupti quo quaerat possimus consequuntur</p>
+                                <button>Read more</button>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+                <div class="bottom">
+                    <p>Copyright &copy; 2014</p>
+                </div>  
+            </div>  
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootcamp | New Page 4</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'poppins', sans-serif;
+        }
+        body{
+            background-color: white;
+            overflow-x: hidden;
+        }
+        .logo-header{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .header{
+            border-bottom: 4px solid white;
+            background-color: rgb(158, 11, 99);
+            padding: 20px;
+        }
+        .logo-header img:first-child{
+            width: 10em;
+            height: auto;
+            position: relative;
+            bottom: 3px;
+            right: 6em;
+            -webkit-box-shadow: -7px -7px 6px 3px #B75690; 
+            box-shadow: -7px -7px 6px 3px #B75690;
+        }
+        .logo-header img:last-child{
+            width: 10em;
+            height: auto;
+            position: relative;
+            top: 40px;
+            left: 6em;
+            -webkit-box-shadow: -7px -7px 6px 3px #B75690; 
+            box-shadow: -7px -7px 6px 3px #B75690;
+        }
+        .text-header h2{
+            color: #fff;
+            font-family: 'Merriweather', sans-serif;
+            font-size: 25pt;
+            margin-left: -9em;
+            margin-top: -.5em;
+            letter-spacing: .1em;
+        }
+        .text-header p{
+            color: rgb(207, 207, 207);
+            margin-left: -9em;
+        }
+        nav{
+            border-top: 1.5px solid rgb(37, 37, 37);
+            border-bottom: 1.5px solid rgb(37, 37, 37);
+            -webkit-box-shadow: 0px 5px 25px -14px #000000, 0px -5px 25px -14px #000000; 
+            box-shadow: 0px 5px 25px -14px #000000, 0px -5px 25px -14px #000000;
+            background-color: rgb(192, 126, 166);
+        }
+        nav ul{
+            display: flex;
+            justify-content: space-evenly;
+            width: 60%;
+            align-items: center;
+        }
+        nav ul svg{
+            fill: white;
+            width: .55em;
+            height: auto;
+        }
+        nav ul ul li svg{
+            transform: rotate(-90deg);
+        }
+        nav ul li{
+            padding: 10px 0;
+            list-style: none;
+            display: inline-block;
+        }
+        nav ul ul ul li{
+            border-bottom: 2px solid white;
+        }
+        nav ul ul li{
+            width: 110px;
+            float: none;
+            display: list-item;
+            position: relative;
+            background: #9E0B63;
+            text-align: center;
+        }
+        nav ul li a{
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+        }
+        nav ul ul{
+            display: none;
+            position: absolute;
+            top: 11.8em;
+            color: #fff;
+            font-weight: bold;
+        }
+        nav ul ul ul{
+            top: 2.4em;
+            left: 5em;
+        }
+        nav ul ul ul li:hover{
+            background-color: rgb(192, 126, 166);
+        }
+        nav ul ul ul li a:hover{
+            color: black;
+            text-decoration: underline;
+        }
+        nav ul li:hover > ul{
+            display: block;
+        }
+        .main-content{
+            margin-bottom: 100px;
+        }
+        .main-content-all{
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .main-content-1{
+            -webkit-box-shadow: -50px -50px 0px -30px #9E0B63, 50px 50px 0px -30px rgb(158, 11, 99); 
+            box-shadow: -50px -50px 0px -30px #9E0B63, 50px 50px 0px -30px rgb(158, 11, 99);
+            background-color: rgb(207, 207, 207);
+            border: 2px solid black;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 15% 100%, 0 85%);
+            width: 20%;
+            padding: 0 20px;
+            height: 28em;
+        }
+        .main-content-1 h3{
+            color: rgb(158, 11, 99);
+            font-size: 15pt;
+            margin-top: 50px;
+            margin-bottom: 30px;
+        }
+        .main-content-1 p{
+            width: 85%;
+            word-spacing: .6em;
+            line-height: 1.5em;
+            margin-bottom: 40px;
+        }
+        .main-content-1 ul li{
+            content: \2B9E;
+            line-height: 1.5em;
+            margin-left: 20px;
+        }
+        .main-content-2{
+            width: 60%;
+        }
+        .main-content-2 h2{
+            color: rgb(158, 11, 99);
+            font-size: 18pt;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        .main-content-2 p span{
+            color: rgb(158, 11, 99);
+            font-weight: bold;
+        }
+        .main-content p:first-child{
+            text-align: right;
+            margin-top: 15px;
+            margin-right: 40px;
+        }
+        .main-content-2 ul li{
+            width: 65%;
+        }
+        .main-content-2 ul li{
+            margin-left: 50px;
+            line-height: 1.6em;
+        }
+        .main-content p:first-child, .main-content-2 ul li:nth-child(6) span, .main-content-2 p a{
+            color: rgb(183, 86, 144);
+        }
+        .main-content-2 p:nth-child(3){
+            margin: 20px 0 30px 0;
+        }
+        .footer{
+            padding: 15px 0;
+            background-color: rgb(158, 11, 99);
+        }
+        .footer p{
+            text-align: center;
+            font-size: 11pt;
+            color: #fff;
+        }
+        .one, .one1{
+            width: 1em;
+            height: 33.5em;
+            background-color:rgb(183, 86, 144);
+            border: 1.5px solid black;
+        }
+        .one{
+            position: absolute;
+            top: 16em;
+            left: 0;
+            border-top-right-radius: .3em;
+            border-bottom: none;
+            border-left: none;
+        }
+        .one1{
+            position: absolute;
+            top: 16em;
+            right: 0;
+            border-top-left-radius: .3em;
+            border-bottom: none;
+            border-right: none;
+        }
+        .two, .two2{
+            width: .4em;
+            height: 31.65em;
+            background-color: rgb(158, 11, 99);
+        }
+        .two{
+            position: absolute;
+            top: 18em;
+            left: 1.1em;
+            border-top-right-radius: .1em;
+        }
+        .two2{
+            position: absolute;
+            top: 18em;
+            right: 1.05em;
+            border-top-left-radius: .1em;
+        }
+        .three, .three3{
+            width: .7em;
+            height: .3em;
+            background-color: rgb(158, 11, 99);
+        }
+        .three{
+            position: absolute;
+            top: 15.7em;
+            left: 0;
+            border-top-right-radius: .1em;
+        }
+        .three3{
+            position: absolute;
+            top: 15.7em;
+            right: 0;
+            border-top-left-radius: .1em;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo-header">
+            <img src="/images/desktop.png" alt="desktop logo">
+            <div class="text-header">
+                <h2>Your Site Name</h2>
+                <p>your slogan comes here</p>
+            </div>
+            <img src="/images/desktop.png" alt="desktop logo">
+        </div>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/page_1.html">New Page 1</a></li>
+            <li><a href="/page_2.html">New Page 2</a></li>
+            <li><a href="/page_3.html">New Page 3</a></li>
+            <li><a href="/page_4.html">New Page 4 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M310.6 246.6l-127.1 128C176.4 380.9 168.2 384 160 384s-16.38-3.125-22.63-9.375l-127.1-128C.2244 237.5-2.516 223.7 2.438 211.8S19.07 192 32 192h255.1c12.94 0 24.62 7.781 29.58 19.75S319.8 237.5 310.6 246.6z"/></svg></a>
+                <ul>
+                    <li>Courses <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M310.6 246.6l-127.1 128C176.4 380.9 168.2 384 160 384s-16.38-3.125-22.63-9.375l-127.1-128C.2244 237.5-2.516 223.7 2.438 211.8S19.07 192 32 192h255.1c12.94 0 24.62 7.781 29.58 19.75S319.8 237.5 310.6 246.6z"/></svg>
+                        <ul>
+                            <li><a href="#">Course 1</a></li>
+                            <li><a href="#">Course 2</a></li>
+                            <li><a href="#">Course 3</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="/page_5.html">New Page 5</a></li>
+        </ul>
+    </nav>
+    <div class="one"></div>
+    <div class="one1"></div>
+    <div class="two"></div>
+    <div class="two2"></div>
+    <div class="three"></div>
+    <div class="three3"></div>
+    <div class="main-content">
+        <p>November 2, 2007 (Fri)</p>
+        <div class="main-content-all">
+            <div class="main-content-1">
+                <h3>Web site Add - ons</h3>
+                <p>Check out our easy to integrate Web Site Add-ons!</p>
+                <ul>
+                    <li>Smart Survey</li>
+                    <li>Smart Multi Poll</li>
+                    <li>Smart Poll</li>
+                    <li>Smart Guest Book</li>
+                    <li>Smart Quote</li>
+                </ul>
+            </div>
+            <div class="main-content-2">
+                <h2>Features of this Education Template</h2>
+                <ul>
+                    <li>Unique, attractive kids web site template design with cool colors</li>
+                    <li>Easy-to-use Drop-down Menus</li>
+                    <li>JavaScript Date Display</li>
+                    <li>Easy-to-edit Text Links</li>
+                    <li>All <b>11</b> linked HTML pages included</li>
+                    <li>Cross Browser Compatible- <span>Tested for IE 5+, Netscape 6+, Opera 7+, Firefox 1.0+</span></li>
+                    <li>Designed to stretch and fit all resolutions (800 x 600 and higher)</li>
+                </ul>
+                <p><span>Buy Now</span> for Only <b>$39.95</b>! <a href="">Add to cart</a></p>
+                <p><a href="">More Templates from SmartWebby.com</a></p>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p>Copyright &copy; &nbsp;www.yoursitename.com - All rights reserved. Designed by SmartWebby.com</p>
+    </div>
+</body>
+</html>

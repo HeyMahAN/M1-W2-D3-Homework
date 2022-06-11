@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootcamp | New Page 2</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body, .list {
+            background-color: rgba(214, 213, 213, 0.827);
+            font-family: 'poppins', sans-serif;
+        }
+        .main-body {
+            height: max-content;
+            margin: auto;
+            width: 70%;
+        }
+        .header {
+            background-color: #fff;
+            height: max-content;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            font-weight: normal;
+            font-size: 3em;
+            padding: 10px;
+            color: gray;
+        }
+        .header h1 span {
+            color: rgb(13, 13, 32);
+            font-weight: 600;
+        }
+        .menu-bar {
+            background-color: rgb(13, 13, 32);
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+            align-items: center;
+        }
+        .menu-bar ul {
+            display: flex;
+            justify-content: space-evenly;
+            width: 70%;
+            margin-left: -5em;
+        }
+        .menu-bar ul li {
+            list-style: none;
+            font-family: 'Merriweather', sans-serif;
+            padding: 18px 15px;
+        }
+        .menu-bar ul li a {
+            text-decoration: none;
+            color: #fff;
+        }
+        .menu-bar svg {
+            height: 1.6em;
+            width: 1.6em;
+            position: relative;
+            left: 5em;
+            fill: white;
+        }
+        .menu-bar svg:hover{
+            fill: rgb(0, 41, 176);
+            background-color: white;
+            border-radius: 50%;
+        }
+        .header-img {
+            height: 18em;
+            background: rgb(141, 181, 24);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .header-img p{
+            color: rgba(255, 255, 255, 0.916);
+            font-size: 3em;
+        }
+        .content{
+            margin-top: 50px;
+            margin-bottom: 20px;
+        }
+        .content1 ,.content2{
+            display: flex;
+            justify-content: space-between;
+        }
+        .content1 div{
+            width: 30%;
+            background-color: #fff;
+            border-radius: .5em;
+            padding: 15px 10px 10px 13px;
+            margin-bottom: 20px;
+        }
+        .content1 div h2, .content2 div h2, .gallery h2{
+            margin-top: 8px;
+            margin-bottom: 8px;
+            font-weight: normal;
+            font-size: 28pt;
+        }
+        .content2 div h3{
+            margin-top: 8px;
+            margin-bottom: 8px;
+            font-weight: normal;
+            font-size: 20pt;
+        }
+        .content1 div p, .content2 div p{
+            line-height: 1.4em;
+        }
+        .content2{
+            background-color: #fff;
+            border-radius: .5em;
+            padding: 15px 10px 10px 13px;
+        }
+        .content2 div:first-child{
+            width: 60%;
+        }
+        .content2 div:nth-child(2){
+            width: 35%;
+            border-radius: .2em;
+        }
+        .list ul li{
+            list-style: none;
+            font-family: 'Merriweather', sans-serif;
+        }
+        .list ul li a{
+            color: #000;
+            text-decoration: none;
+            font-size: 15pt;
+        }
+        .list ul li a:hover, .menu-bar ul li a:hover{
+            cursor: pointer;
+            color: goldenrod;
+        }
+        .content2 div .list{
+            padding: 0 15px;
+            line-height: 3em;
+            height: max-content;
+            width: 90%;
+        }
+        .gallery h2{
+            text-align: center;
+        }
+        .gallery div{
+            display: flex;
+            height: 6em;
+        }
+        .gallery div div{
+            width: 25%;
+            justify-content: center;
+            align-items: center;
+            color: rgba(255, 255, 255, 0.916);
+        }
+        .gallery-1{
+            background-color: rgb(65, 158, 245);
+        }
+        .gallery-2{
+            background-color: rgb(125, 171, 8);
+        }
+        .gallery-3{
+            background-color: rgb(202, 146, 42);
+        }
+        .gallery-4{
+            background-color: rgb(226, 52, 52);
+        }
+        .footer{
+            display: flex;
+            background-color: #fff;
+            padding: 20px 15px;
+            justify-content: space-between;
+            margin-top: 40px;
+        }
+        .footer p{
+            font-size: 14pt;
+        }
+        .footer p:last-child{
+            color: rgb(70, 129, 4);
+        }
+    </style>
+</head>
+<body>
+    <div class="main-body">
+        <div class="header">
+            <h1><span>site</span>logo</h1>
+            <div class="menu-bar">
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/page_1.html">New Page 1</a></li>
+                    <li><a href="/page_2.html">New Page 2</a></li>
+                    <li><a href="/page_3.html">New Page 3</a></li>
+                    <li><a href="/page_4.html">New Page 4</a></li>
+                    <li><a href="/page_5.html">New Page 5</a></li>
+                </ul>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                    <path
+                        d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z" />
+                </svg>
+            </div>
+        </div>
+        <div class="header-img">
+            <p>Header Image</p>
+        </div>
+        <div class="content">
+            <div class="content1">
+                <div>
+                    <h2>About</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat, laborum vel quae itaque et ipsum dicta delectus repellendus, accusantium tempore repellat excepturi eveniet dolorem dolor, dolorum blanditiis aliquam necessitatibus impedit totam! Cupiditate soluta nulla labore.</p>
+                </div>
+                <div>
+                    <h2>Company</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat, laborum vel quae itaque et ipsum dicta delectus repellendus, accusantium tempore repellat excepturi eveniet dolorem dolor, dolorum blanditiis aliquam necessitatibus impedit totam! Cupiditate soluta nulla labore.</p>
+                </div>
+                <div>
+                    <h2>Services</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat, laborum vel quae itaque et ipsum dicta delectus repellendus, accusantium tempore repellat excepturi eveniet dolorem dolor, dolorum blanditiis aliquam necessitatibus impedit totam! Cupiditate soluta nulla labore.</p>
+                </div>
+            </div>
+            <div class="content2">
+                <div>
+                    <h2>Content</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id obcaecati molestias nesciunt saepe. Iusto quae nulla quos illo, iure ullam esse? Laboriosam placeat voluptatum quasi ut quas, libero sequi, doloremque minima, voluptate tempore cum laudantium nulla cupiditate rem vitae. Dolorem neque at architecto autem quibusdam!</p>
+                    <h3>Sub Header</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni illum error repellat ducimus corrupti quam inventore amet atque in ab? Dolorem laudantium, mollitia libero aliquam vero iusto, eveniet facilis, eos placeat adipisci minima corrupti necessitatibus illo omnis sed magnam sequi ex. Veritatis, quas veniam consectetur distinctio in alias ducimus recusandae</p>
+                </div>
+                <div class="navigation">
+                    <h3>Navigation</h3>
+                    <div class="list">
+                        <ul>
+                            <li><a href="/index.html">Home</a></li>
+                            <li><a href="/page_1.html">New Page 1</a></li>
+                            <li><a href="/page_2.html">New Page 2</a></li>
+                            <li><a href="/page_3.html">New Page 3</a></li>
+                            <li><a href="/page_4.html">New Page 4</a></li>
+                            <li><a href="/page_5.html">New Page 5</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="gallery">
+            <h2>Gallery</h2>
+            <div>
+                <div class="gallery-1">Gallery Image</div>
+                <div class="gallery-2">Gallery Image</div>
+                <div class="gallery-3">Gallery Image</div>
+                <div class="gallery-4">Gallery Image</div>
+            </div>
+        </div>
+        <div class="footer">
+            <p>Copyright 2018, Vision Design - graphic zoo</p>
+            <p>Design and coding by Response Team</p>
+        </div>
+    </div>
+</body>
+</html>
