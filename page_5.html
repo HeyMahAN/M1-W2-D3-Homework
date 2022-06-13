@@ -50,24 +50,89 @@
             width: 70%;
             margin: 30px;
         }
-        .left-content nav ul li{
+        .nav-items ul li{
             list-style: none;
             border-bottom: 1.5px dotted ;
-            padding: 5px 0 5px 30px
+            padding: 5px 0 5px 30px;
+            color: rgb(128, 46, 46);
+            font-size: 15pt;
         }
-        .left-content nav ul li a{
+        .nav-items ul li a{
             text-decoration: none;
             color: rgb(128, 46, 46);
             font-size: 15pt;
         }
-        .left-content nav ul li a:hover{
+        .nav-items ul li a:hover, .nav-items ul li:hover{
             color: black;
             font-weight: bold;
             font-size: 15.5pt;
+            cursor: pointer;
         }
         .left-content p{
             margin: 25px 0 0 30px;
             text-align: justify;
+        }
+        .about-drop-content {
+            background: rgb(255, 7, 7);
+            height: max-content;
+            width: max-content;
+            font-family: 'poppins';
+            font-size: 12pt;
+            border-radius: .5em;
+            line-height: 2;
+            position: absolute;
+            top: 2.5em;
+            display: none !important;
+            text-align: center;
+            color: #000;
+        }
+
+        .about-drop-content ul {
+            display: inline-block;
+            margin: 0;
+        }
+        
+        .about-drop-content ul li {
+            list-style: none;
+            width: 9em;
+            text-align: center;
+            border-bottom: 1.5px solid white;
+            padding: 0 !important;
+        }
+        .about-drop-content ul li a{
+            color: #000;
+        }
+        .about-drop-content ul li a:hover{
+            font-weight: normal;
+            font-size: 100%;
+        }
+        .about-drop-content ul li:hover {
+            background-color: rgb(204, 204, 204);
+            cursor: pointer;
+            font-weight: normal;
+        }
+
+        .about-drop-content ul li:last-child{
+            border-bottom: none;
+        }
+        .border{
+            border: 1.5px solid white;
+        }
+        .page1:hover{
+            border-top-left-radius: .3em;
+            border-top-right-radius: .3em;
+        }
+        .page5:hover{
+            border-bottom-left-radius: .3em;
+            border-bottom-right-radius: .3em;
+        }
+
+        .show {
+            display: block !important;
+        }
+
+        .nav-items {
+            position: relative;
         }
         .right-content h3{
             margin-top: 35px;
@@ -94,6 +159,12 @@
             font-size: 15pt;
         }
     </style>
+    <script>
+        function home() {
+            var drp = document.querySelector('.about-drop-content');
+            drp.classList.toggle('show');
+        }
+    </script>
 </head>
 <body>
     <div class="body-container">
@@ -103,14 +174,25 @@
         </header>
         <div class="main-content">
             <aside class="left-content">
-                <nav>
+                <nav class="nav-items">
                     <ul>
-                        <li><a href="/index.html">Home</a></li>
-                        <li><a href="/page_1.html">New Page 1</a></li>
-                        <li><a href="/page_2.html">New Page 2</a></li>
-                        <li><a href="/page_3.html">New Page 3</a></li>
-                        <li><a href="/page_4.html">New Page 4</a></li>
-                        <li><a href="/page_5.html">New Page 5</a></li>
+                        <div class="home">
+                            <li onclick="home()">Home</li>
+                            <div class="about-drop-content">
+                                <ul>
+                                    <li class="page1"><a href="/page_1.html">New Page</a></li>
+                                    <li><a href="/page_1.html">New Page</a></li>
+                                    <li><a href="/page_2.html">New Page 2</a></li>
+                                    <li><a href="/page_3.html">New Page 3</a></li>
+                                    <li class="page5"><a href="/page_4.html">New Page 4</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <li><a href="/features.html">Features</a></li>
+                        <li><a href="/reviews.html">Reviews</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="/faq.html">FAQ</a></li>
+                        <li class="border"><a href="/register.html">Get Started</a></li>
                     </ul>
                 </nav>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus blanditiis asperiores excepturi dolore porro explicabo odit aliquid culpa, minus quibusdam facere nulla labore pariatur, accusantium dolores numquam, odio dicta non?</p>

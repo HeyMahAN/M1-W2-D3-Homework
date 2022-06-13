@@ -47,18 +47,19 @@
             color: gold;
         }
 
-        .header-menu {
-            height: 2em;
+        .nav-items {
+            height: 2.2em;
         }
 
-        .header-menu ul {
+        .nav-items ul {
             display: flex;
             margin-left: 28em;
             margin-bottom: 0;
             width: auto;
+            padding: 0;
         }
 
-        .header-menu ul li {
+        .nav-items ul li {
             list-style: none;
             background: #555;
             margin-right: 4.5px;
@@ -69,13 +70,87 @@
             font-family: sans-serif;
         }
 
-        .header-menu ul li:nth-child(6) {
+        .nav-items ul li:nth-child(7),
+        .nav-items ul li:nth-child(2) {
             margin-right: 0;
         }
 
-        .header-menu ul li a:hover {
+        .nav-items ul li a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .nav-items ul li a:hover,
+        .nav-items ul li:hover {
             color: gold;
             cursor: pointer;
+        }
+
+        .about-drop-content {
+            background: rgb(246, 29, 29);
+            height: max-content;
+            width: max-content;
+            font-family: 'poppins';
+            font-size: 12pt;
+            border-radius: .5em;
+            line-height: 2;
+            position: absolute;
+            top: 2.2em;
+            display: none !important;
+        }
+
+        .about-drop-content ul {
+            display: inline-block;
+            margin: 0;
+        }
+
+        .about-drop-content ul li {
+            list-style: none;
+            width: 9em;
+            text-align: center;
+            color: black;
+            background: transparent;
+            border-bottom: 1.5px solid white;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+            margin: 0;
+        }
+
+        .about-drop-content ul li a {
+            color: #000;
+        }
+
+        .about-drop-content ul li a:hover {
+            color: brown;
+        }
+
+        .about-drop-content ul li:hover {
+            background-color: rgb(204, 204, 204);
+            cursor: pointer;
+        }
+
+        .about-drop-content ul li:last-child {
+            border-bottom: none;
+        }
+
+        .border {
+            border: 1.5px solid white;
+        }
+        .page1:hover{
+            border-top-left-radius: .4em;
+            border-top-right-radius: .4em;
+        }
+        .page5:hover{
+            border-bottom-left-radius: .4em;
+            border-bottom-right-radius: .4em;
+        }
+
+        .show {
+            display: block !important;
+        }
+
+        .nav-items {
+            position: relative;
         }
 
         .main-content {
@@ -203,34 +278,43 @@
             background-color: #323534;
             height: 7em;
         }
-        .footer ul:first-child, .footer div{
+
+        .footer ul:first-child,
+        .footer div {
             margin: 20px auto;
             color: gray;
             width: 80%;
             font-size: 13px;
             text-align: center;
         }
-        .footer div{
+
+        .footer div {
             display: flex;
             justify-content: center;
             align-items: center;
         }
-        .footer ul:first-child, .footer div ul{
+
+        .footer ul:first-child,
+        .footer div ul {
             display: flex;
             justify-content: center;
             padding: 0;
         }
-        .footer ul:first-child li a:hover, .footer div ul li a:hover{
+
+        .footer ul:first-child li a:hover,
+        .footer div ul li a:hover {
             color: white;
         }
-        .footer ul:first-child li, .footer div ul li {
+
+        .footer ul:first-child li,
+        .footer div ul li {
             list-style: none;
             padding-right: 20px;
             padding: 0 25px;
         }
 
         .footer ul:first-child li a,
-        .footer div ul li a{
+        .footer div ul li a {
             color: gray;
             text-decoration: none;
         }
@@ -241,7 +325,7 @@
         .footer ul:first-child li:nth-child(4),
         .footer ul:first-child li:nth-child(5),
         .footer div ul li:first-child,
-        .footer div ul li:nth-child(2){
+        .footer div ul li:nth-child(2) {
             border-right: 1.5px solid white;
         }
 
@@ -254,10 +338,17 @@
         .footer div ul li:nth-child(2) {
             border-left: 1.5px solid white;
         }
-        .footer div p{
+
+        .footer div p {
             margin: 0;
         }
     </style>
+    <script>
+        function home() {
+            var drp = document.querySelector('.about-drop-content');
+            drp.classList.toggle('show');
+        }
+    </script>
 </head>
 
 <body>
@@ -266,16 +357,33 @@
             <p class="p1" id="top">simple<span>style_banner</span></p>
             <p>Simple. Contemporary. Website Template.</p>
         </div>
-        <div class="header-menu">
-            <ul>
+        <!-- <ul>
                 <li><a href="/index.html">Home</a></li>
                 <li><a target="_blank" href="/page_1.html">New Page 1</a></li>
                 <li><a href="/page_2.html">New Page 2</a></li>
                 <li><a href="/page_3.html">New Page 3</a></li>
                 <li><a href="/page_4.html">New Page 4</a></li>
                 <li><a href="/page_5.html">New Page 5</a></li>
+            </ul> -->
+        <nav class="nav-items">
+            <ul>
+                <li onclick="home()">Home</li>
+                <div class="about-drop-content">
+                    <ul>
+                        <li class="page1"><a href="/index.html">Home</a></li>
+                        <li><a href="/page_2.html">New Page 2</a></li>
+                        <li><a href="/page_3.html">New Page 3</a></li>
+                        <li><a href="/page_4.html">New Page 4</a></li>
+                        <li class="page5"><a href="/page_5.html">New Page 5</a></li>
+                    </ul>
+                </div>
+                <li><a href="/features.html">Features</a></li>
+                <li><a href="/reviews.html">Reviews</a></li>
+                <li><a href="/pricing.html">Pricing</a></li>
+                <li><a href="/faq.html">FAQ</a></li>
+                <li class="border"><a href="/register.html">Get Started</a></li>
             </ul>
-        </div>
+        </nav>
     </div>
     <div class="main-content">
         <img class="banner" src="/images/banner.jpg" alt="this is banner">

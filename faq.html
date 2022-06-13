@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ Page</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-image: linear-gradient(to right top, #3b067f, #004eb5, #007fd3, #00adde, #06d8e1);
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100vh;
+        }
+        .nav-items{
+            margin-top: 40px;
+        }
+        .nav-items ul{
+            display: flex;
+            justify-content: space-evenly;
+            font-size: 2em;
+        }
+        .nav-items ul li{
+            list-style: none;
+            padding: 5px 10px;
+            color: #fff;
+        }
+        .nav-items ul li:hover, .nav-items ul li a:hover{
+            color: brown;
+            cursor: pointer;
+        }
+        .nav-items ul li a{
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .about-drop-content {
+            background: rgb(255, 7, 7);
+            height: max-content;
+            width: max-content;
+            font-family: 'poppins';
+            font-size: 12pt;
+            border-radius: .5em;
+            line-height: 2;
+            position: absolute;
+            top: 3em;
+            display: none !important;
+        }
+
+        .about-drop-content ul {
+            display: inline-block;
+            margin: 0;
+        }
+        
+        .about-drop-content ul li {
+            list-style: none;
+            width: 9em;
+            text-align: center;
+            color: black;
+            border-bottom: 1.5px solid white;
+        }
+        .about-drop-content ul li a{
+            color: #000;
+        }
+        .about-drop-content ul li:hover {
+            background-color: rgb(204, 204, 204);
+            cursor: pointer;
+        }
+
+        .about-drop-content ul li:last-child{
+            border-bottom: none;
+        }
+        .border{
+            border: 1.5px solid white;
+        }
+        .page1:hover{
+            border-top-left-radius: .3em;
+            border-top-right-radius: .3em;
+        }
+        .page5:hover{
+            border-bottom-left-radius: .3em;
+            border-bottom-right-radius: .3em;
+        }
+
+        .show {
+            display: block !important;
+        }
+
+        .nav-items {
+            position: relative;
+        }
+        .active{
+            background: black;
+        }
+        h2{
+            margin: 50px 40px 20px 40px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        h2 span{
+            color: #2605de;
+            font-family: 'Merriweather', sans-serif;
+        }
+        p{
+            font-weight: bold;
+            color: white;
+            margin: 0 auto;
+            width: 90%;
+        }
+    </style>
+    <script>
+        function home() {
+            var drp = document.querySelector('.about-drop-content');
+            drp.classList.toggle('show');
+        }
+    </script>
+</head>
+<body>
+    <nav class="nav-items">
+        <ul>
+            <div class="home">
+                <li onclick="home()">Home</li>
+                <div class="about-drop-content">
+                    <ul>
+                        <li class="page1"><a href="/page_1.html">New Page</a></li>
+                        <li><a href="/page_2.html">New Page 2</a></li>
+                        <li><a href="/page_3.html">New Page 3</a></li>
+                        <li><a href="/page_4.html">New Page 4</a></li>
+                        <li class="page5"><a href="/page_5.html">New Page 5</a></li>
+                    </ul>
+                </div>
+            </div>
+            <li><a href="/features.html">Features</a></li>
+            <li><a href="/reviews.html">Reviews</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li class="active"><a href="/faq.html">FAQ</a></li>
+            <li class="border"><a href="/register.html">Get Started</a></li>
+        </ul>
+    </nav>
+    <h2>This is <span>FAQ</span> page</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, cupiditate. Dolorum incidunt similique ex amet, explicabo corporis consequuntur facilis voluptatibus. Facilis vitae quam perspiciatis, expedita natus aliquam nesciunt molestiae ea perferendis nulla alias odit animi nostrum saepe sit inventore aspernatur iusto deserunt nobis, voluptate, consectetur similique. Hic sit, aliquid earum exercitationem ut omnis reprehenderit aliquam quod voluptas eum labore ipsum enim autem. Minima aut eos perspiciatis sint impedit recusandae eligendi earum, repellendus dignissimos totam rem pariatur quas molestias veritatis inventore repudiandae adipisci. Assumenda maiores, illo quas velit accusantium animi odio cupiditate dicta ad quos sequi aut architecto quae voluptatibus fuga.</p>
+</body>
+</html>

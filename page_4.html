@@ -55,68 +55,127 @@
             color: rgb(207, 207, 207);
             margin-left: -9em;
         }
-        nav{
+        .nav-items{
             border-top: 1.5px solid rgb(37, 37, 37);
             border-bottom: 1.5px solid rgb(37, 37, 37);
             -webkit-box-shadow: 0px 5px 25px -14px #000000, 0px -5px 25px -14px #000000; 
             box-shadow: 0px 5px 25px -14px #000000, 0px -5px 25px -14px #000000;
             background-color: rgb(192, 126, 166);
+            position: relative;
         }
-        nav ul{
+        .nav-items ul{
             display: flex;
             justify-content: space-evenly;
             width: 60%;
             align-items: center;
         }
-        nav ul svg{
+        .nav-items ul svg{
             fill: white;
             width: .55em;
             height: auto;
         }
-        nav ul ul li svg{
+        .nav-items ul ul li svg{
             transform: rotate(-90deg);
         }
-        nav ul li{
+        .nav-items ul li{
             padding: 10px 0;
             list-style: none;
             display: inline-block;
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
         }
-        nav ul ul ul li{
+        .nav-items ul ul ul li{
             border-bottom: 2px solid white;
         }
-        nav ul ul li{
+        .nav-items ul ul li{
             width: 110px;
             float: none;
             display: list-item;
             position: relative;
-            background: #9E0B63;
+            background: red;
             text-align: center;
         }
-        nav ul li a{
+        .nav-items ul li a{
             text-decoration: none;
             color: #fff;
             font-weight: bold;
         }
-        nav ul ul{
+        .about-drop-content ul ul{
             display: none;
             position: absolute;
-            top: 11.8em;
+            top: 10em;
+            left: 4em;
             color: #fff;
             font-weight: bold;
+            background: #9E0B63;
         }
-        nav ul ul ul{
+        .nav-items ul ul ul{
             top: 2.4em;
             left: 5em;
+            z-index: 1;
         }
-        nav ul ul ul li:hover{
+        .nav-items ul ul ul li:hover{
             background-color: rgb(192, 126, 166);
         }
-        nav ul ul ul li a:hover{
+        .nav-items ul ul ul li a:hover{
             color: black;
             text-decoration: underline;
         }
-        nav ul li:hover > ul{
+        .nav-items ul li:hover > ul{
             display: block;
+        }
+        .about-drop-content {
+            background: rgb(255, 7, 7);
+            height: max-content;
+            width: max-content;
+            font-family: 'poppins';
+            font-size: 12pt;
+            border-radius: .5em;
+            line-height: 2;
+            position: absolute;
+            top: 2.8em;
+            display: none !important;
+            z-index: 2;
+        }
+
+        .about-drop-content ul {
+            display: inline-block;
+            margin: 0;
+        }
+        
+        .about-drop-content ul li {
+            list-style: none;
+            width: 9em;
+            text-align: center;
+            color: black;
+            border-bottom: 1.5px solid white;
+        }
+        .about-drop-content ul li a{
+            color: #000;
+        }
+        .about-drop-content ul li:hover {
+            background-color: rgb(50, 50, 50);
+            cursor: pointer;
+        }
+
+        .about-drop-content ul li:last-child{
+            border-bottom: none;
+        }
+        .border{
+            border: 1.5px solid white;
+        }
+        .page1:hover{
+            border-top-left-radius: .3em;
+            border-top-right-radius: .3em;
+        }
+        .page5:hover{
+            border-bottom-left-radius: .3em;
+            border-bottom-right-radius: .3em;
+        }
+
+        .show {
+            display: block !important;
         }
         .main-content{
             margin-bottom: 100px;
@@ -135,6 +194,7 @@
             width: 20%;
             padding: 0 20px;
             height: 28em;
+            z-index: 1;
         }
         .main-content-1 h3{
             color: rgb(158, 11, 99);
@@ -149,7 +209,6 @@
             margin-bottom: 40px;
         }
         .main-content-1 ul li{
-            content: \2B9E;
             line-height: 1.5em;
             margin-left: 20px;
         }
@@ -195,7 +254,7 @@
         }
         .one, .one1{
             width: 1em;
-            height: 33.5em;
+            height: 33.7em;
             background-color:rgb(183, 86, 144);
             border: 1.5px solid black;
         }
@@ -217,7 +276,7 @@
         }
         .two, .two2{
             width: .4em;
-            height: 31.65em;
+            height: 31.80em;
             background-color: rgb(158, 11, 99);
         }
         .two{
@@ -250,6 +309,12 @@
             border-top-left-radius: .1em;
         }
     </style>
+    <script>
+        function home() {
+            var drp = document.querySelector('.about-drop-content');
+            drp.classList.toggle('show');
+        }
+    </script>
 </head>
 <body>
     <div class="header">
@@ -262,15 +327,15 @@
             <img src="/images/desktop.png" alt="desktop logo">
         </div>
     </div>
-    <nav>
+    <!-- <nav>
         <ul>
             <li><a href="/index.html">Home</a></li>
             <li><a href="/page_1.html">New Page 1</a></li>
             <li><a href="/page_2.html">New Page 2</a></li>
             <li><a href="/page_3.html">New Page 3</a></li>
-            <li><a href="/page_4.html">New Page 4 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M310.6 246.6l-127.1 128C176.4 380.9 168.2 384 160 384s-16.38-3.125-22.63-9.375l-127.1-128C.2244 237.5-2.516 223.7 2.438 211.8S19.07 192 32 192h255.1c12.94 0 24.62 7.781 29.58 19.75S319.8 237.5 310.6 246.6z"/></svg></a>
+            <li><a href="/page_4.html">New Page 4 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"> Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. <path d="M310.6 246.6l-127.1 128C176.4 380.9 168.2 384 160 384s-16.38-3.125-22.63-9.375l-127.1-128C.2244 237.5-2.516 223.7 2.438 211.8S19.07 192 32 192h255.1c12.94 0 24.62 7.781 29.58 19.75S319.8 237.5 310.6 246.6z"/></svg></a>
                 <ul>
-                    <li>Courses <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M310.6 246.6l-127.1 128C176.4 380.9 168.2 384 160 384s-16.38-3.125-22.63-9.375l-127.1-128C.2244 237.5-2.516 223.7 2.438 211.8S19.07 192 32 192h255.1c12.94 0 24.62 7.781 29.58 19.75S319.8 237.5 310.6 246.6z"/></svg>
+                    <li>Courses <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. <path d="M310.6 246.6l-127.1 128C176.4 380.9 168.2 384 160 384s-16.38-3.125-22.63-9.375l-127.1-128C.2244 237.5-2.516 223.7 2.438 211.8S19.07 192 32 192h255.1c12.94 0 24.62 7.781 29.58 19.75S319.8 237.5 310.6 246.6z"/></svg>
                         <ul>
                             <li><a href="#">Course 1</a></li>
                             <li><a href="#">Course 2</a></li>
@@ -280,6 +345,38 @@
                 </ul>
             </li>
             <li><a href="/page_5.html">New Page 5</a></li>
+        </ul>
+    </nav> -->
+    <nav class="nav-items">
+        <ul>
+            <div class="home">
+                <li onclick="home()">Home</li>
+                <div class="about-drop-content">
+                    <ul>
+                        <li class="page1"><a href="/index.html">Home</a></li>
+                        <li><a href="/page_1.html">New Page</a></li>
+                        <li><a href="/page_2.html">New Page 2</a></li>
+                        <li><a href="/page_3.html">New Page 3</a></li>
+                        <li class="page5"><a href="/page_4.html">New Page 4 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M310.6 246.6l-127.1 128C176.4 380.9 168.2 384 160 384s-16.38-3.125-22.63-9.375l-127.1-128C.2244 237.5-2.516 223.7 2.438 211.8S19.07 192 32 192h255.1c12.94 0 24.62 7.781 29.58 19.75S319.8 237.5 310.6 246.6z"/></svg></a>
+                            <ul>
+                                <li>Courses <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M310.6 246.6l-127.1 128C176.4 380.9 168.2 384 160 384s-16.38-3.125-22.63-9.375l-127.1-128C.2244 237.5-2.516 223.7 2.438 211.8S19.07 192 32 192h255.1c12.94 0 24.62 7.781 29.58 19.75S319.8 237.5 310.6 246.6z"/></svg>
+                                    <ul>
+                                        <li><a href="#">Course 1</a></li>
+                                        <li><a href="#">Course 2</a></li>
+                                        <li><a href="#">Course 3</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="/page_5.html">New Page 5</a></li>
+                    </ul>
+                </div>
+            </div>
+            <li><a href="/features.html">Features</a></li>
+            <li><a href="/reviews.html">Reviews</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="/faq.html">FAQ</a></li>
+            <li class="border"><a href="/register.html">Get Started</a></li>
         </ul>
     </nav>
     <div class="one"></div>

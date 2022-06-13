@@ -35,11 +35,13 @@
             font-weight: 600;
         }
         .menu-bar {
+            padding: 5px 0;
             background-color: rgb(13, 13, 32);
             display: flex;
             justify-content: space-around;
             margin-top: 20px;
             align-items: center;
+            position: relative;
         }
         .menu-bar ul {
             display: flex;
@@ -51,10 +53,72 @@
             list-style: none;
             font-family: 'Merriweather', sans-serif;
             padding: 18px 15px;
+            color: #fff;
         }
         .menu-bar ul li a {
             text-decoration: none;
             color: #fff;
+        }
+        .about-drop-content {
+            background: rgb(246, 29, 29);
+            height: max-content;
+            width: max-content;
+            font-family: 'poppins';
+            font-size: 12pt;
+            border-radius: .5em;
+            line-height: 2;
+            position: absolute;
+            top: 3em;
+            left: .5em;
+            display: none !important;
+        }
+
+        .about-drop-content ul {
+            display: inline-block;
+            margin-left: 0;
+        }
+
+        .about-drop-content ul li {
+            list-style: none;
+            width: 9em;
+            text-align: center;
+            color: black;
+            background: transparent;
+            border-bottom: 1.5px solid white;
+            margin: 0;
+        }
+
+        .about-drop-content ul li a {
+            color: #000;
+        }
+
+        .about-drop-content ul li a:hover {
+            color: brown !important;
+        }
+
+        .about-drop-content ul li:hover {
+            background-color: rgb(204, 204, 204);
+            cursor: pointer;
+        }
+
+        .about-drop-content ul li:last-child {
+            border-bottom: none;
+        }
+
+        .border {
+            border: 1.5px solid white;
+        }
+
+        .show {
+            display: block !important;
+        }
+        .page1:hover{
+            border-top-left-radius: .4em;
+            border-top-right-radius: .4em;
+        }
+        .page5:hover{
+            border-bottom-left-radius: .4em;
+            border-bottom-right-radius: .4em;
         }
         .menu-bar svg {
             height: 1.6em;
@@ -130,7 +194,7 @@
             text-decoration: none;
             font-size: 15pt;
         }
-        .list ul li a:hover, .menu-bar ul li a:hover{
+        .list ul li a:hover, .menu-bar ul li a:hover, .menu-bar ul li:hover{
             cursor: pointer;
             color: goldenrod;
         }
@@ -179,19 +243,42 @@
             color: rgb(70, 129, 4);
         }
     </style>
+    <script>
+        function home() {
+            var drp = document.querySelector('.about-drop-content');
+            drp.classList.toggle('show');
+        }
+    </script>
 </head>
 <body>
     <div class="main-body">
         <div class="header">
             <h1><span>site</span>logo</h1>
             <div class="menu-bar">
-                <ul>
+                <!-- <ul>
                     <li><a href="/index.html">Home</a></li>
                     <li><a href="/page_1.html">New Page 1</a></li>
                     <li><a href="/page_2.html">New Page 2</a></li>
                     <li><a href="/page_3.html">New Page 3</a></li>
                     <li><a href="/page_4.html">New Page 4</a></li>
                     <li><a href="/page_5.html">New Page 5</a></li>
+                </ul> -->
+                <ul>
+                    <li onclick="home()">Home</li>
+                        <div class="about-drop-content">
+                            <ul>
+                                <li class="page1"><a href="/index.html">Home</a></li>
+                                <li><a href="/page_1.html">New Page</a></li>
+                                <li><a href="/page_3.html">New Page 3</a></li>
+                                <li><a href="/page_4.html">New Page 4</a></li>
+                                <li class="page5"><a href="/page_5.html">New Page 5</a></li>
+                            </ul>
+                        </div>
+                    <li><a href="/features.html">Features</a></li>
+                    <li><a href="/reviews.html">Reviews</a></li>
+                    <li><a href="/pricing.html">Pricing</a></li>
+                    <li><a href="/faq.html">FAQ</a></li>
+                    <li class="border"><a href="/register.html">Get Started</a></li>
                 </ul>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                     <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
